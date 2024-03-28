@@ -15,9 +15,13 @@ namespace ResAccess.API.Controllers
                     "Please provide resAccessManager object when making " +
                     "an instance of ResAccessController class.");
 
+            if (logger is null)
+                throw new ArgumentNullException(nameof(logger),
+                    "Please provide logger object when making " +
+                    "an instance of ResAccessController class.");
+
             _logger = logger;
             _resAccessManager = resAccessManager;
-
         }
     }
 }

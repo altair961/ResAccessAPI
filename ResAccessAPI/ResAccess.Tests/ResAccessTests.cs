@@ -19,5 +19,15 @@ namespace ResAccess.Tests
             Assert.Throws<ArgumentNullException>(() => new ResAccessController(loggerMock, resAccessManager));
         }
 
+        [Fact]
+        public void Given_ResAccessController_ctor_Logger_param_is_null_should_throw()
+        {
+            // Arrange
+            var resAccessManagerMock = Substitute.For<IResAccessManager>();
+            ILogger<ResAccessController> logger = null;
+
+            // Act Assert
+            Assert.Throws<ArgumentNullException>(() => new ResAccessController(logger, resAccessManagerMock));
+        }
     }
 }
