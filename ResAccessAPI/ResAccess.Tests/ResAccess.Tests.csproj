@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ResAccess.API\ResAccess.API.csproj" />
+  </ItemGroup>
+
 </Project>
