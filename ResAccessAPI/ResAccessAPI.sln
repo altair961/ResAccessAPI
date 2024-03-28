@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResAccess.API", "ResAccess.API\ResAccess.API.csproj", "{F8B687A1-C6FD-415B-B938-50FA27A82AF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResAccess.API", "ResAccess.API\ResAccess.API.csproj", "{F8B687A1-C6FD-415B-B938-50FA27A82AF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResAccess.Tests", "ResAccess.Tests\ResAccess.Tests.csproj", "{1DEA60C9-2DE2-483A-99E6-5324ACE9DB07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F8B687A1-C6FD-415B-B938-50FA27A82AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8B687A1-C6FD-415B-B938-50FA27A82AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8B687A1-C6FD-415B-B938-50FA27A82AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEA60C9-2DE2-483A-99E6-5324ACE9DB07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEA60C9-2DE2-483A-99E6-5324ACE9DB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEA60C9-2DE2-483A-99E6-5324ACE9DB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEA60C9-2DE2-483A-99E6-5324ACE9DB07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
