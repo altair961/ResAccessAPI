@@ -25,10 +25,15 @@ namespace ResAccess.API.Controllers
         }
 
         [Route("requests")]
-        public GetAccessResponse GetAccess(string resource) 
+        public GetAccessResponse GetAccess(GetAccessRequest request) 
         {
-            if (string.IsNullOrWhiteSpace(resource))
-                throw new ArgumentException(nameof(resource),
+            if (request is null)
+                throw new ArgumentNullException(nameof(request),
+                    "Please provide GetAccessRequest " +
+                    "instance as a parameter ");
+
+            if (string.IsNullOrWhiteSpace(request.Resource))
+                throw new ArgumentException(nameof(request.Resource),
                     "Pleace provide resource string parameter which " +
                     "is not null, empty string and not whitespace.");
 
