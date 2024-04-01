@@ -23,5 +23,17 @@ namespace ResAccess.API.Controllers
             _logger = logger;
             _resAccessManager = resAccessManager;
         }
+
+        [Route("requests")]
+        public GetAccessResponse GetAccess(string resource) 
+        {
+            if (string.IsNullOrWhiteSpace(resource))
+                throw new ArgumentException(nameof(resource),
+                    "Pleace provide resource string parameter which " +
+                    "is not null, empty string and not whitespace.");
+
+            //_resAccessManager.ResAccessStatuses[resourceName]
+            return new GetAccessResponse() { AccessDecision = AccessDecision.Granted };
+        }
     }
 }
