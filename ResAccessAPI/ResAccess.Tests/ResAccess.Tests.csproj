@@ -24,6 +24,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ResAccess.API\ResAccess.API.csproj" />
+    <ProjectReference Include="..\ResAccess.DTO\ResAccess.DTO.csproj" />
+    <ProjectReference Include="..\ResAccess.Interfaces\ResAccess.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
