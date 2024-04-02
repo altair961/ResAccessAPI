@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ResAccess.DTO\ResAccess.DTO.csproj" />
     <ProjectReference Include="..\ResAccess.Interfaces\ResAccess.Interfaces.csproj" />
   </ItemGroup>
 

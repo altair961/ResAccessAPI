@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ResAccess.Interfaces;
+using ResAccess.DTO;
 
 namespace ResAccess.API.Controllers
 {
