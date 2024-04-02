@@ -8,11 +8,6 @@ namespace ResAccess.API.Controllers
     [Route("[controller]")]
     public class ResAccessController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         private readonly ILogger<ResAccessController> _logger;
         private readonly IResAccessManager _resAccessManager;
         public ResAccessController(ILogger<ResAccessController> logger, IResAccessManager resAccessManager)
@@ -31,20 +26,7 @@ namespace ResAccess.API.Controllers
             _resAccessManager = resAccessManager;
         }
 
-        [HttpGet("/api/GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
-        {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
-
         [HttpPost("/api/requests")]
-
         public GetAccessStatusResponse GetAccessStatus(GetAccessStatusRequest request)
         {
             if (request is null)
