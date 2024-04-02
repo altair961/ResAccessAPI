@@ -1,6 +1,6 @@
 ﻿namespace ResAccess.DTO
 {
-    public class GetAccessRequest
+    public class GetAccessStatusRequest
     {
         public string? Resource { get; set; }
     }

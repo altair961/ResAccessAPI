@@ -34,63 +34,63 @@ namespace ResAccess.Tests
         }
 
         [Fact]
-        public void When_GetAccess_is_invoked_with_resource_equal_whitespace_should_throw()
+        public void When_GetAccessStatus_is_invoked_with_resource_equal_whitespace_should_throw()
         {
             // Arrange
             var resAccessManagerMock = Substitute.For<IResAccessManager>();
             var loggerMock = Substitute.For<ILogger<ResAccessController>>();
             var sut = new ResAccessController(loggerMock, resAccessManagerMock);
-            var request = new GetAccessRequest()
+            var request = new GetAccessStatusRequest()
             {
                 Resource = "  "
             };
 
             // Act Assert
-            Assert.Throws<ArgumentException>(() => sut.GetAccess(request));
+            Assert.Throws<ArgumentException>(() => sut.GetAccessStatus(request));
         }
 
         [Fact]
-        public void When_GetAccess_is_invoked_with_resource_equal_empty_string_should_throw()
+        public void When_GetAccessStatus_is_invoked_with_resource_equal_empty_string_should_throw()
         {
             // Arrange
             var resAccessManagerMock = Substitute.For<IResAccessManager>();
             var loggerMock = Substitute.For<ILogger<ResAccessController>>();
             var sut = new ResAccessController(loggerMock, resAccessManagerMock);
-            var request = new GetAccessRequest()
+            var request = new GetAccessStatusRequest()
             {
                 Resource = string.Empty
             };
 
             // Act Assert
-            Assert.Throws<ArgumentException>(() => sut.GetAccess(request));
+            Assert.Throws<ArgumentException>(() => sut.GetAccessStatus(request));
         }
 
         [Fact]
-        public void When_GetAccess_is_invoked_with_resource_equal_null_should_throw()
+        public void When_GetAccessStatus_is_invoked_with_resource_equal_null_should_throw()
         {    
             // Arrange
             var resAccessManagerMock = Substitute.For<IResAccessManager>();
             var loggerMock = Substitute.For<ILogger<ResAccessController>>();
             var sut = new ResAccessController(loggerMock, resAccessManagerMock);
-            var request = new GetAccessRequest()
+            var request = new GetAccessStatusRequest()
             {
                 Resource = null
             };
 
             // Act Assert
-            Assert.Throws<ArgumentException>(() => sut.GetAccess(request));
+            Assert.Throws<ArgumentException>(() => sut.GetAccessStatus(request));
         }
         [Fact]
-        public void When_GetAccess_is_invoked_with_GetAccessRequest_equal_null_should_throw()
+        public void When_GetAccessStatus_is_invoked_with_GetAccessStatusRequest_equal_null_should_throw()
         {
             // Arrange
             var resAccessManagerMock = Substitute.For<IResAccessManager>();
             var loggerMock = Substitute.For<ILogger<ResAccessController>>();
             var sut = new ResAccessController(loggerMock, resAccessManagerMock);
-            GetAccessRequest getAccessRequest = null;
+            GetAccessStatusRequest request = null;
 
             // Act Assert
-            Assert.Throws<ArgumentNullException>(() => sut.GetAccess(getAccessRequest));
+            Assert.Throws<ArgumentNullException>(() => sut.GetAccessStatus(request));
         }
     }
 }
