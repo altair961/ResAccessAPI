@@ -1,3 +1,6 @@
+using ResAccess.Implementations;
+using ResAccess.Interfaces;
+
 namespace ResAccess.API
 {
     public class Program
@@ -12,6 +15,7 @@ namespace ResAccess.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddTransient<IResAccessManager, ResAccessManager>();
 
             var app = builder.Build();
 

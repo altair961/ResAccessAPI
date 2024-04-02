@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ResAccess.DTO\ResAccess.DTO.csproj" />
+    <ProjectReference Include="..\ResAccess.Implementations\ResAccess.Implementations.csproj" />
   </ItemGroup>
 
 </Project>

@@ -43,7 +43,8 @@ namespace ResAccess.API.Controllers
             .ToArray();
         }
 
-        [HttpPost(Name = "/api/requests")]
+        [HttpPost("/api/requests")]
+
         public GetAccessStatusResponse GetAccessStatus(GetAccessStatusRequest request)
         {
             if (request is null)
