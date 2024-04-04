@@ -1,3 +1,4 @@
+using ResAccess.DTO;
 using ResAccess.Implementations;
 using ResAccess.Interfaces;
 
@@ -30,7 +31,15 @@ namespace ResAccess.API
 
             app.UseAuthorization();
 
+            //app.Map("/api/requests", (GetAccessStatusRequest req) =>
+            //{
+            //    if (req.Resource != "res") 
+            //    {
+            //        return Results.BadRequest(new { message = "Invalid age" });
+            //    }
 
+            //    return Results.NotFound();
+            //});
             app.MapControllers();
 
             app.Run();

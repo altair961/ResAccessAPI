@@ -1,6 +1,6 @@
 ﻿namespace ResAccess.Interfaces
 {
-    public interface IResAccessManager
+    public interface IResAccessManager : IGetAccessStatus
     {
     }
 }
