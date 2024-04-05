@@ -1,11 +1,10 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.Logging;
 using NSubstitute;
 using ResAccess.API.Controllers;
 using ResAccess.DTO;
 using ResAccess.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using Autofac;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace ResAccess.Tests
 {

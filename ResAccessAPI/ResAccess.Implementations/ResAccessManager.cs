@@ -7,7 +7,13 @@ namespace ResAccess.Implementations
         //public IDictionary<string, AccessDecision> ResAccessStatuses => throw new NotImplementedException();
         public AccessStatus GetAccessStatus(string resourceName)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(resourceName))
+                throw new ArgumentException(nameof(resourceName),
+                    "Pleace provide resource string parameter which " +
+                    "is not null, empty string and not whitespace.");
+
+            return new AccessStatus { };
+            // throw new NotImplementedException();
         }
     }
 }
