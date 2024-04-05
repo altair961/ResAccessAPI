@@ -27,23 +27,28 @@ namespace ResAccess.API.Controllers
         }
 
         [HttpPost("/api/requests")]
-        //public GetAccessStatusResponse GetAccessStatus(GetAccessStatusRequest request)
         public ActionResult<GetAccessStatusResponse> GetAccessStatus(GetAccessStatusRequest request)
         {
-//            try
-  //          {
+            try
+            {
                 if (request is null)
                     throw new ArgumentNullException(nameof(request),
                         "Please provide GetAccessStatusRequest " +
                         "instance as a parameter ");
 
-           // }
-    //        catch (ArgumentException ex)
-      //      {
-        //        _logger.LogError("123");
-          //  }
+                if (string.IsNullOrWhiteSpace(request.Resource))
+                    throw new ArgumentException(nameof(request.Resource),
+                        "Pleace provide resource string parameter which " +
+                        "is not null, empty string and not whitespace.");
 
-            // return BadRequest("sdv");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest("Bad request.");
+            }
+
+            _resAccessManager.GetAccessStatus(request.Resource);
+
             return new GetAccessStatusResponse
             {
                 AccessDecision = Interfaces.AccessDecision.Granted,
