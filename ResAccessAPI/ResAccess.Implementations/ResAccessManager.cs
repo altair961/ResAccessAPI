@@ -13,7 +13,6 @@ namespace ResAccess.Implementations
                     "is not null, empty string and not whitespace.");
 
             return new AccessStatus { };
-            // throw new NotImplementedException();
         }
     }
 }
